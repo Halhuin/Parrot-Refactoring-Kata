@@ -1,4 +1,4 @@
-import { Parrot, EuropeanParrot, AfricanParrot, PARROT_TYPES } from '../parrot';
+import { Parrot, EuropeanParrot, AfricanParrot, NorwegianBlueParrot, PARROT_TYPES } from '../parrot';
 
 describe("Parrot", function () {
     test("get speed of european parrot", function () {
@@ -26,19 +26,19 @@ describe("Parrot", function () {
     });
 
     test("get speed norwegian blue parrot nailed", function () {
-        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 1.5, true);
+        const parrot = new NorwegianBlueParrot(0, 1.5, true);
 
         expect(parrot.getSpeed()).toBe(0);
     });
 
     test("get speed norwegian blue parrot not nailed", function () {
-        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 1.5, false);
+        const parrot = new NorwegianBlueParrot(0, 1.5, false);
 
         expect(parrot.getSpeed()).toBe(18);
     });
 
     test("get speed norwegian blue parrot not nailed high voltage", function () {
-        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 4, false);
+        const parrot = new NorwegianBlueParrot(0, 4, false);
 
         expect(parrot.getSpeed()).toBe(24);
     });
