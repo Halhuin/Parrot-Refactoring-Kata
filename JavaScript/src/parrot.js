@@ -44,3 +44,9 @@ export class EuropeanParrot extends Parrot{
         return this.getBaseSpeed()
     }
 }
+
+export class AfricanParrot extends Parrot{
+    constructor(numberOfCoconuts, voltage, isNailed){
+        super(PARROT_TYPES.AFRICAN, numberOfCoconuts, voltage, isNailed)
+    }
+}
